@@ -25,3 +25,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.uui-gradient-text {
+  background: -webkit-linear-gradient(right, rgb(99, 16, 176), #9c3bc4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
