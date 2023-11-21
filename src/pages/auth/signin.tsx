@@ -34,7 +34,7 @@ const Signin = ({ providers }: any) => {
           />
           <div className={styles.cardContent}>
             {providers &&
-              Object.values(providers).map((provider, i) => (
+              Object.values(providers).map((provider: any, i) => (
                 <div key={provider.name} style={{ marginBottom: 3 }}>
                   <button
                     className={i == 0 ? styles.twitter : styles.discord}
