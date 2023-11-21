@@ -66,7 +66,7 @@ const Signin = ({ providers }: any) => {
 
 export default Signin;
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps(context: any) {
   const providers = await getProviders();
   const csrfToken = await getCsrfToken(context);
   return {
