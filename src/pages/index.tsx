@@ -37,7 +37,7 @@ export default function Home() {
       </div>
       <Link
         href={"/auth/signin"}
-        className="absolute top-6 right-8 uui-gradient-bg text-center w-[6%] h-[6%] flex felx-row items-center justify-center rounded-3xl"
+        className="absolute top-6 right-8 uui-gradient-bg text-center w-[15%] h-[6%] sm:w-[6%] sm:h-[6%] flex felx-row items-center justify-center rounded-3xl"
       >
         Login
       </Link>
