@@ -11,7 +11,7 @@ import DeleteAlt from "baseui/icon/delete-alt";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
-const Signin = ({ csrfToken, providers }) => {
+const Signin = ({ providers }: any) => {
   const router = useRouter();
 
   const { status } = useSession();
