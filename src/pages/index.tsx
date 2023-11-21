@@ -1,18 +1,27 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Head from "next/head";
+import { useSession, signIn, signOut } from "next-auth/react";
+import { useEffect } from "react";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const { status, data } = useSession();
+
+  useEffect(() => {
+    console.log(data);
+  }, []);
+  console.log(status);
   return (
     <main className="flex min-h-screen flex-col items-center p-24  bg-[url(/assets/bg.jpg)] bg-center bg-cover justify-around sm:flex-row sm:items-center sm:justify-around">
       <Head>
-        <title>Mediconnect</title>
+        <title>Medconnect</title>
       </Head>
       <div className="">
         <h1 className="text-5xl font-bold uui-gradient-text pb-4">
-          Mediconnect
+          Medconnect
         </h1>
         <p className="text-xl font-extrabold">Coming soon...</p>
       </div>
@@ -26,6 +35,12 @@ export default function Home() {
           className="w-[100%] h-[100%]"
         />
       </div>
+      <Link
+        href={"/auth/signin"}
+        className="absolute top-6 right-8 uui-gradient-bg text-center w-[6%] h-[6%] flex felx-row items-center justify-center rounded-3xl"
+      >
+        Login
+      </Link>
     </main>
   );
 }
