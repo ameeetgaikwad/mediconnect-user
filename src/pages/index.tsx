@@ -17,7 +17,7 @@ export default function Home() {
         <p className="text-xl font-extrabold">Coming soon...</p>
       </div>
 
-      <div className="w-screen">
+      <div className="w-screen sm:w-[32%]">
         <Image
           src={"/assets/asset.svg"}
           width={400}
